@@ -17,7 +17,7 @@ For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/
    python3.12 pyreco/exe/fft2.py -i run00310.mid.lz4 -o fft_run00310
 2. Reconstruction of root files from the mid.lz4 files. It will create a root file as an output. Use the below command.  
    python3.12 -m vPDUreco -i input_file_directory -c napoli.ini -o reconstructed_root_file
-3. Passport analysis is used to calculate the signal-to-noise ratio, Dark count rate, Direct crosstalk, 1 PE amplitude.  
+3. Passport analysis is used to calculate the signal-to-noise ratio, Dark count rate, Direct crosstalk, and 1 PE amplitude.  
    python3.12 -m vPDUFingerAnalysis.py  -I input_file_directory -P False -B 69 -T c -C q  
    The arguments are:  
    
@@ -29,5 +29,13 @@ For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/
     parser.add_argument("-S", "--ini_file", help="Path to .ini file")  
     parser.add_argument("-R", "--reading", help="Which channels to read in")  
     parser.add_argument("-V", "--IV", help="IV curve path")  
-    parser.add_argument("-N", "--Name", help="Output csv names")  
+    parser.add_argument("-N", "--Name", help="Output csv names")
+
+    Inside the script: add the channels for analysis. 
+   else:
+      lower = 0 #starting channel
+      upper = 4 #last channel on DAQ
+      print("running over channels 1-4 (default)")
+   For example, if there is one vPDU, it is 0-3, if there are two vPDUs, it is 0-7, and if there are three vPDUs, it is 0-11.
    
+   This script will create a CSV file for each run.
