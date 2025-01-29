@@ -25,7 +25,7 @@ def draw_plot(hist_1, y_axis_title, x_axis_title, draw_grid, write_text, folder,
     canv.Close()
 
 
-for file_number in [499,500,501,502]:
+for file_number in [501,502]:
 
     # Open ROOT file and get the TTree
     #in_file = ROOT.TFile.Open(f"reconstructed_root_files_with_config0/run{file_number}.root", "READ")#reconstructed_root_files_with_config0
