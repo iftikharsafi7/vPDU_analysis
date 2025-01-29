@@ -13,12 +13,12 @@ vPDU data files are available on the chuck server at CAMK
 
 
 For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/veto_passport/-/tree/vPDUdev" here are the instructions.
-1. Noise analysis for the vPDUs for each tile. This is done both at warm and cold temperature
+1. Noise analysis for the vPDUs for each tile. This is done both at warm and cold temperatures.  
    python3.12 pyreco/exe/fft2.py -i run00310.mid.lz4 -o fft_run00310
-2. Reconstruction of root files from the mid.lz4 files. It will create a root file as an output. Use the below command
+2. Reconstruction of root files from the mid.lz4 files. It will create a root file as an output. Use the below command.  
    python3.12 -m vPDUreco -i input_file_directory -c napoli.ini -o reconstructed_root_file
-3. Passport analysis is used to calculate the signal-to-noise ratio, Dark count rate, Direct crosstalk, 1 PE amplitude.
-   python3.12 -m vPDUFingerAnalysis.py  -I input_file_directory -P False -B 69 -T c -C q /
+3. Passport analysis is used to calculate the signal-to-noise ratio, Dark count rate, Direct crosstalk, 1 PE amplitude.  
+   python3.12 -m vPDUFingerAnalysis.py  -I input_file_directory -P False -B 69 -T c -C q  
    The arguments are:  
    
     parser.add_argument("-I","--InputReco",help ="Directory/to/data/for/spe")  
