@@ -18,8 +18,8 @@ For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/
 2. Reconstruction of root files from the mid.lz4 files. It will create a root file as an output. Use the below command
    python3.12 -m vPDUreco -i input_file_directory -c napoli.ini -o reconstructed_root_file
 3. Passport analysis is used to calculate the signal-to-noise ratio, Dark count rate, Direct crosstalk, 1 PE amplitude.
-   python3.12 -m vPDUFingerAnalysis.py  -I input_file_directory -P False -B 69 -T c -C q
-   The arguments are:\
+   python3.12 -m vPDUFingerAnalysis.py  -I input_file_directory -P False -B 69 -T c -C q /
+   The arguments are:/
    
     parser.add_argument("-I","--InputReco",help ="Directory/to/data/for/spe")
     parser.add_argument("-P","--plot",help = "Plot = True or False")
