@@ -19,15 +19,15 @@ For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/
    python3.12 -m vPDUreco -i input_file_directory -c napoli.ini -o reconstructed_root_file
 3. Passport analysis is used to calculate the signal-to-noise ratio, Dark count rate, Direct crosstalk, 1 PE amplitude.
    python3.12 -m vPDUFingerAnalysis.py  -I input_file_directory -P False -B 69 -T c -C q /
-   The arguments are:/
+   The arguments are:  
    
-    parser.add_argument("-I","--InputReco",help ="Directory/to/data/for/spe")
-    parser.add_argument("-P","--plot",help = "Plot = True or False")
-    parser.add_argument("-B","--bias",help = "Bias voltage (V)")
-    parser.add_argument("-T","--temp",help= "Warm(w) or Cold Test(c)")
-    parser.add_argument("-C","--channel",help="q or t")
-    parser.add_argument("-S", "--ini_file", help="Path to .ini file")
-    parser.add_argument("-R", "--reading", help="Which channels to read in")
-    parser.add_argument("-V", "--IV", help="IV curve path")
-    parser.add_argument("-N", "--Name", help="Output csv names")
+    parser.add_argument("-I","--InputReco",help ="Directory/to/data/for/spe")  
+    parser.add_argument("-P","--plot",help = "Plot = True or False")  
+    parser.add_argument("-B","--bias",help = "Bias voltage (V)")  
+    parser.add_argument("-T","--temp",help= "Warm(w) or Cold Test(c)")  
+    parser.add_argument("-C","--channel",help="q or t")  
+    parser.add_argument("-S", "--ini_file", help="Path to .ini file")  
+    parser.add_argument("-R", "--reading", help="Which channels to read in")  
+    parser.add_argument("-V", "--IV", help="IV curve path")  
+    parser.add_argument("-N", "--Name", help="Output csv names")  
    
