@@ -7,3 +7,5 @@ Instructions:
    To run this file use this command "python3 IV.py -I IV_data.csv -PS c" where the -PS is the power supply argument and c is the CAEN power supply.
 3. reco_finger_plots.py: This script creates the finger plots from the reconstructed root files. Inside the file, add the name of the text file and directory. I will plot the finger plots for each tile.
    
+vPDU data files are available on chuck server at CAMK
+/work/chuck/iftikhar/vpdu_files/
