@@ -31,7 +31,7 @@ For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/
     parser.add_argument("-V", "--IV", help="IV curve path")  
     parser.add_argument("-N", "--Name", help="Output csv names")
 
-    Inside the script: add the channels for analysis. 
+    Inside the script: add the channels for analysis.  
    else:  
       lower = 0 #starting channel  
       upper = 4 #last channel on DAQ  
