@@ -12,6 +12,6 @@ do
     qr_code="run${number}"
 
     # Call Python script with the necessary arguments
-    python3.12 -m vPDUFingerAnalysis_GS -I "$input_file" -P True -B 66.4 -T c -C q --Name "$qr_code"
+    python3.12 -m vPDUFingerAnalysis -I "$input_file" -P True -B 66.4 -T c -C q --Name "$qr_code"
 
 done
