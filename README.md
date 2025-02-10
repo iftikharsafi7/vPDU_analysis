@@ -4,6 +4,8 @@ This repository is for analysis of the vPDUs
 vPDU data files are available on the chuck server at CAMK  
 /work/chuck/iftikhar/vpdu_files/  
 
+The MIDAS files can be downloaded using this command  
+scp iftikhar@camk.edu.pl:/work/chuck/iftikhar/vpdu_files/run00461.mid.lz4 .
 
 
 For the passport analysis from the repository "https://gitlab.in2p3.fr/darkside/veto_passport/-/tree/vPDUdev" here are the instructions.
