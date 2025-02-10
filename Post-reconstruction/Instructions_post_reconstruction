@@ -1,1 +1,4 @@
-
+1. Passport.sh  
+   To run passport on multiple root files use the passport.sh
+   Inside the passport.sh, add the run numbers.
+   This saves the file with the QR code
