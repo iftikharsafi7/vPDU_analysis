@@ -7,5 +7,5 @@
    Use this to merge all the CSV files produced by the passport.sh.  
    To do that first copy all the csv files to a folder, copy merge_csv_file.py to the same folder.  
    After running this script it will produce a single csv file with all the data for each run and quadrant.  
-   In the end, you can plot the data from the CSV file. It will contain run number, channel, SNR, DCR, DiCT, 1 pe amplitude etc
+   In the end, you can plot the data from the CSV file. It will contain a run number, channel, SNR, DCR, DiCT, 1 pe amplitude, etc
 
