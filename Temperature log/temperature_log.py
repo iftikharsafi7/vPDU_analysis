@@ -3,8 +3,8 @@ from matplotlib.dates import DateFormatter
 from datetime import datetime
 
 # Define file paths
-file_paths = ["temperature_log_15_18_to_16_40_14112024_refilling.txt", 
-              "temperature_log_16_41_14112024.txt","temperature_log_10_36_to 15_15_141124.txt","temperature_log.txt"]
+file_paths = ["temperature_log_15_18_to_16_40_14112024_refilling.txt"] 
+              #,"temperature_log_16_41_14112024.txt","temperature_log_10_36_to 15_15_141124.txt","temperature_log.txt"]
 
 # Initialize storage for data
 time_data_all = []  # Store all timestamps
