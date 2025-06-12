@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import os
 
 
-def plot_group(file_indices, title, Vlim = [15, 80]):
+def plot_group(file_indices, title, Vlim = [15, 80], save = False, save_path = None):
     
     IV = IVAnalysis.IVAnalysis()
     Vbd_Cold = [None] * 20
@@ -31,6 +31,8 @@ def plot_group(file_indices, title, Vlim = [15, 80]):
     #plt.xlim(45, 64)
     plt.ylim(2.3, 140)
     #plt.legend()
+    if save == True:
+        plt.savefig(save_path)
     plt.show()
     
 
