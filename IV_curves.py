@@ -12,7 +12,7 @@ def load_setup(file):
         data = json.load(f)
 
         return {int(k): v for k, v in data.items()}
-    
+"""
 def load_data(file, n_vpdus, threshold = 35, exception = False ):
     # --- Load and Clean Data ---
     df = pd.read_csv(file)
@@ -26,6 +26,34 @@ def load_data(file, n_vpdus, threshold = 35, exception = False ):
     except KeyError:
         for i in range(1, n_vpdus):
             df = df[(df[f'CAEN{i}_Voltage (V)'] >= threshold)]
+    return df
+"""
+
+def load_data(file, n_vpdus, threshold=35, exception=False):
+    import pandas as pd
+
+    # --- Load and Clean Data ---
+    df = pd.read_csv(file)
+
+    # Convert all but the first column to numeric, drop rows with NaNs
+    for col in df.columns[1:]:
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+    df = df.dropna()
+
+    # Ensure "Tile" column is string
+    df["Tile"] = df["Tile"].astype(str)
+
+    # Filter rows only if the CAENx column exists
+    for i in range(n_vpdus):
+        col_name = f'CAEN{i}_Voltage (V)'
+        if col_name in df.columns:
+            df = df[df[col_name] >= threshold]
+        else:
+            if not exception:
+                print(f"⚠️ WARNING: {col_name} was not found. This port will be skipped for the analysis.")
+            else:
+                raise KeyError(f"Columna faltante: {col_name}")
+
     return df
     
 
